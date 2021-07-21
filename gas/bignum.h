@@ -30,6 +30,9 @@
  *									*
  \***********************************************************************/
 
+#ifndef BIGNUM_DEFINES
+#define BIGNUM_DEFINES
+
 #define	LITTLENUM_NUMBER_OF_BITS	(16)
 #define	LITTLENUM_RADIX			(1 << LITTLENUM_NUMBER_OF_BITS)
 #define	LITTLENUM_MASK			(0xFFFF)
@@ -40,3 +43,6 @@
 #endif
 
 typedef unsigned short LITTLENUM_TYPE;
+
+#endif /* BIGNUM_DEFINES */
+
