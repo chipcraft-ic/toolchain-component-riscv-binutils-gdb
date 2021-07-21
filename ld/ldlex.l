@@ -532,7 +532,7 @@ yy_create_string_buffer (const char *string, size_t size)
 
   b->yy_is_our_buffer = 1;
   b->yy_is_interactive = 0;
-  b->yy_at_bol = 1;
+  b->yyatbol = 1;
   b->yy_fill_buffer = 0;
 
   /* flex 2.4.7 changed the interface.  FIXME: We should not be using
