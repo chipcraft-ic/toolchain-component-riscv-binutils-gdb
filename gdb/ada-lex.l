@@ -636,11 +636,4 @@ rewind_to_char (int ch)
   yyrestart (NULL);
 }
 
-/* Dummy definition to suppress warnings about unused static definitions. */
-typedef void (*dummy_function) ();
-dummy_function ada_flex_use[] = 
-{ 
-  (dummy_function) yyunput
-};
-
 DIAGNOSTIC_POP
