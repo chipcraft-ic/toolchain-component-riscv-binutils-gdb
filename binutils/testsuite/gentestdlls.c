@@ -108,7 +108,7 @@ write_coff_header (FILE* file, uint16_t machine)
 static void
 write_simple_dll (const char* name, uint16_t machine)
 {
-  FILE* file = fopen (name, "w");
+  FILE* file = fopen (name, "wb");
 
   if (file == NULL)
     {

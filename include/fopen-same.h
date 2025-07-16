@@ -1,4 +1,4 @@
-/* Macros for the 'type' part of an fopen, freopen or fdopen. 
+/* Macros for the 'type' part of an fopen, freopen or fdopen.
 
 	<Read|Write>[Update]<Binary file|text file>
 
@@ -8,7 +8,7 @@
    (and thereby don't conform to ANSI C, but what else is new?).
 
    Copyright (C) 1996-2021 Free Software Foundation, Inc.
-   
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -29,12 +29,12 @@
    the application unable to be configured for both "same" and "binary"
    variant systems.  */
 
-#define FOPEN_RB	"r"
-#define FOPEN_WB 	"w"
-#define FOPEN_AB 	"a"
-#define FOPEN_RUB 	"r+"
-#define FOPEN_WUB 	"w+"
-#define FOPEN_AUB 	"a+"
+#define FOPEN_RB	"rb"
+#define FOPEN_WB 	"wb"
+#define FOPEN_AB 	"ab"
+#define FOPEN_RUB 	"r+b"
+#define FOPEN_WUB 	"w+b"
+#define FOPEN_AUB 	"a+b"
 
 #define FOPEN_RT	"r"
 #define FOPEN_WT 	"w"

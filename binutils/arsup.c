@@ -107,7 +107,7 @@ ar_directory (char *ar_name, struct list *list, char *output)
   arch = open_inarch (ar_name, (char *) NULL);
   if (output)
     {
-      outfile = fopen(output,"w");
+      outfile = fopen(output,"wb");
       if (outfile == 0)
 	{
 	  outfile = stdout;
@@ -263,7 +263,7 @@ ar_addmod (struct list *list)
 	{
 	  bfd *abfd;
 
-#if BFD_SUPPORTS_PLUGINS	  
+#if BFD_SUPPORTS_PLUGINS
 	  abfd = bfd_openr (list->name, "plugin");
 #else
 	  abfd = bfd_openr (list->name, NULL);
