@@ -23,6 +23,11 @@
    replace operations (would check mtime). Doesn't warn when name truncated.
    No way to specify pos_end. Error messages should be more consistent.  */
 
+#if defined _WIN32
+# include <fcntl.h>
+# include <stdlib.h>
+#endif
+
 #include "sysdep.h"
 #include "bfd.h"
 #include "libbfd.h"
@@ -723,6 +728,10 @@ main (int argc, char **argv)
   int file_count;
   char *inarch_filename;
   int i;
+
+#if defined _WIN32
+  _fmode = _O_BINARY;
+#endif
 
 #if defined (HAVE_SETLOCALE) && defined (HAVE_LC_MESSAGES)
   setlocale (LC_MESSAGES, "");
